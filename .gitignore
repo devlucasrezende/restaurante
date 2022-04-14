@@ -1,23 +1,50 @@
-# Compiled class file
-*.class
+######################
+# Backend
+######################
+**/.idea/
+**/contabil-financeiro-backend.iml
+**/HELP.md
+**/target/
+**/pom.xml.tag
+**/mnvw
+**/mvnw.cmd
+**/.mvn/*
+**/.mvn/wrapper/*
+**/pom.xml.releaseBackup
+**/pom.xml.versionsBackup
+**/pom.xml.next
+**/release.properties
+**/dependency-reduced-pom.xml
+**/buildNumber.properties
+**/.mvn/timing.properties
+**/bin/
+**/tmp/
+**/public/
+**/local.properties
+**/.settings/
+**/.loadpath
+**/.recommenders
+**/.externalToolBuilders/
+**/*.pydevproject
+**/.project
+**/.metadata
+**/tmp/
+**/tmp/**/*
+**/*.tmp
+**/*.bak
+**/*.swp
+**/*~.nib
+**/local.properties
+**/.classpath
+**/.settings/
+**/.loadpath
+**/.factorypath
+**/src/main/resources/rebel.xml
+.idea/
+**/.dbeaver/
 
-# Log file
-*.log
-
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+######################
+# Frontend
+######################
+**/coverage
+**/node
