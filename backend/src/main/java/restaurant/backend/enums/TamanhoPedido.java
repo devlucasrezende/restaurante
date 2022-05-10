@@ -1,6 +1,6 @@
 package restaurant.backend.enums;
 
-public enum TamanhoProduto {
+public enum TamanhoPedido {
     GRANDE,
     MEDIO,
     PEQUENO

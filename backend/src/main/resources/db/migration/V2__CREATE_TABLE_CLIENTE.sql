@@ -8,9 +8,5 @@ CREATE TABLE IF NOT EXISTS restaurante.cliente
     CELULAR         VARCHAR(128) NOT NULL,
     CPF             VARCHAR(128) NOT NULL,
     DATA_NASCIMENTO TIMESTAMP,
-    ID_PEDIDO BIGSERIAL,
-    CONSTRAINT pk_cliente PRIMARY KEY (ID),
-    CONSTRAINT fk_cliente_pedido FOREIGN KEY (ID_PEDIDO)
-        REFERENCES restaurante.pedido
-
+    CONSTRAINT pk_cliente PRIMARY KEY (ID)
 );

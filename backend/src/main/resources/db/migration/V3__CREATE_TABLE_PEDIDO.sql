@@ -1,12 +1,12 @@
 CREATE TABLE IF NOT EXISTS restaurante.pedido
 (
     ID         BIGSERIAL NOT NULL,
-    ID_PRODUTO BIGSERIAL NOT NULL,
     QUANTIDADE INTEGER   NOT NULL,
     OBSERVACAO VARCHAR(128),
     TAMANHO      VARCHAR(128) NOT NULL,
     TOTAL      FLOAT(2)  NOT NULL,
+    ID_CLIENTE BIGSERIAL NOT NULL,
     CONSTRAINT pk_pedido PRIMARY KEY (ID),
-    CONSTRAINT fk_pedido_produto FOREIGN KEY (ID_PRODUTO)
-        REFERENCES restaurante.produto
+    CONSTRAINT fk_pedido_cliente FOREIGN KEY (ID_CLIENTE)
+        REFERENCES restaurante.cliente
 );

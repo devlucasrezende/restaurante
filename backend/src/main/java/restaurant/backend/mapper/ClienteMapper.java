@@ -15,6 +15,8 @@ public interface ClienteMapper {
 
     ClienteOut clienteToClienteOut (Cliente cliente);
 
+    ClienteIn clienteToClienteIn (Cliente cliente);
+
     @Mapping(target = "dataRegistro", ignore = true)
     Cliente clienteInToCliente (ClienteIn in);
 }

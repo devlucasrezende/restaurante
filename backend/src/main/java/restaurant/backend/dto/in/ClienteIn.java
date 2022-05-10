@@ -3,8 +3,10 @@ package restaurant.backend.dto.in;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
+import restaurant.backend.entity.Pedido;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Data
 public class ClienteIn {

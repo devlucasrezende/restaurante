@@ -3,35 +3,35 @@ package restaurant.backend.controller;
 
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-import restaurant.backend.dto.in.ClienteIn;
+import restaurant.backend.dto.in.PedidoIn;
 import restaurant.backend.dto.in.ProdutoIn;
-import restaurant.backend.dto.out.ClienteOut;
+import restaurant.backend.dto.out.PedidoOut;
 import restaurant.backend.dto.out.ProdutoOut;
-import restaurant.backend.service.ClienteService;
+import restaurant.backend.service.PedidoService;
 import restaurant.backend.service.ProdutoService;
 
 import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("/produto")
+@RequestMapping("/pedido")
 @AllArgsConstructor
-public class ProdutoController {
+public class PedidoController {
 
-    private final ProdutoService produtoService;
+    private final PedidoService pedidoService;
 
     @GetMapping("/findAll")
-    public List<ProdutoOut> findAllProdutos() {
-        return produtoService.findAllProdutos();
+    public List<PedidoOut> findAllPedido() {
+        return pedidoService.findAllPedidos();
     }
 
     @PostMapping
-    public ProdutoOut save(@Valid @RequestBody ProdutoIn in) {
-        return produtoService.save(in);
+    public void save(@Valid @RequestBody PedidoIn in) {
+        pedidoService.save(in);
     }
 
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Long id) {
-        produtoService.delete(id);
+        pedidoService.delete(id);
     }
 }

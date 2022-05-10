@@ -3,7 +3,7 @@ package restaurant.backend.entity;
 
 import lombok.Getter;
 import lombok.Setter;
-import restaurant.backend.enums.TamanhoProduto;
+import restaurant.backend.enums.TamanhoPedido;
 import restaurant.backend.util.ConfigUrl;
 
 import javax.persistence.*;
@@ -21,8 +21,10 @@ public class Pedido {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "ID_PRODUTO")
-    @OneToMany
+    @ManyToMany
+    @JoinTable(schema = ConfigUrl.SCHEMA_RESTAURANTE, name = "rel_produto_pedido",
+    joinColumns = {@JoinColumn(name = "id_pedido")},
+    inverseJoinColumns = {@JoinColumn(name = "id_produto")})
     private List<Produto> produtos;
 
     @Column(name = "QUANTIDADE")
@@ -35,7 +37,7 @@ public class Pedido {
     private Double total;
 
     @Column(name = "TAMANHO")
-    private TamanhoProduto tamanhoProduto;
+    private TamanhoPedido tamanhoPedido;
 
     @ManyToOne
     @JoinColumn(name = "ID_CLIENTE", referencedColumnName = "id")

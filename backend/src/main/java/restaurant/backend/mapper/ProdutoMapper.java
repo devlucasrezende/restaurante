@@ -19,5 +19,10 @@ public interface ProdutoMapper {
     @Mapping(target = "categoriaProduto", ignore = true)
     ProdutoOut produtoToProdutoOut (Produto produto);
 
+    List<Produto> produtosInToProdutos (List<ProdutoIn> produtos);
+
+    @Mapping(target = "categoriaProduto", ignore = true)
+    ProdutoIn produtoToProdutoIn (Produto produto);
+
     Produto produtoInToProduto (ProdutoIn in);
 }

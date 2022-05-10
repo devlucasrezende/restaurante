@@ -42,8 +42,4 @@ public class Cliente {
     @Column(name = "DATA_NASCIMENTO")
     private LocalDate dataNascimento;
 
-    @OneToMany(mappedBy = "cliente")
-    @Column(name = "ID_PEDIDO")
-    private List<Pedido> pedidos;
-
 }

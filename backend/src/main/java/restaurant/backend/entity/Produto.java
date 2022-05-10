@@ -3,7 +3,6 @@ package restaurant.backend.entity;
 
 import lombok.Getter;
 import lombok.Setter;
-import restaurant.backend.enums.TamanhoProduto;
 import restaurant.backend.util.ConfigUrl;
 
 import javax.persistence.*;
@@ -32,4 +31,5 @@ public class Produto {
     @OneToOne
     @JoinColumn(name = "id_categoria", referencedColumnName = "id")
     private CategoriaProduto categoriaProduto;
+
 }
